@@ -70,16 +70,12 @@ if __name__ == '__main__':
     parser.add_argument('-p1', '--pitch-vocal', type=float, default=0, help='VOCAl PITCH CHANGE')
     parser.add_argument('-irate', '--index-rate', type=float, default=0.75, help='INDEX RATE')
     parser.add_argument('-algo', '--rvc-method', type=str, default='rmvpe', help='RVC METHOD')
-    parser.add_argument('-s1', '--vocal-sound', type=int, default=100, help='VOCAL SOUND')
     # BooleanOptionalAction
     args = parser.parse_args()
 
-    global sep_mode
-    sep_mode = args.sep_mode
     text_name = 'txt2txt'
 
     pitch_vocal = args.pitch_vocal
-    vocal_sound = args.vocal_sound
 
     input_dirdir = os.path.join(os.getcwd(), 'input')
     os.makedirs(input_dirdir, exist_ok=True)
