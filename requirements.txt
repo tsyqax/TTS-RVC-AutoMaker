@@ -11,3 +11,5 @@ torchfcpe
 --find-links https://download.pytorch.org/whl/torch_stable.html
 torch==2.0.1+cu118
 ffmpeg-python>=0.2.0
+gtts
+edge_tts
