@@ -109,8 +109,8 @@ if __name__ == '__main__':
 
     rvc_input_path = input_path
     pitch_vocal = pitch_vocal * 1.2 # 5 삼겹살
-    os.makedirs(os.path.join(os.getcwd(), args.rvc_name), exist_ok=True)
-    rvc_output_path = os.path.join(os.getcwd(), args.rvc_name, f'txt2sound_{number}.mp3')
+    os.makedirs(os.path.join(os.getcwd(), 'output', args.rvc_name), exist_ok=True)
+    rvc_output_path = os.path.join(os.getcwd(), 'output', args.rvc_name, f'txt2sound_{number}.mp3')
     rvc_song(rvc_index_path, rvc_model_path, args.index_rate, rvc_input_path, rvc_output_path, pitch_vocal, args.rvc_method, 3, 0.8, 0.33, 128)
     save_number(number)
     print(f'DONE!! {number}!!')
