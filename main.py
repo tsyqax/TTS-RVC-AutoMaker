@@ -26,17 +26,17 @@ def load_number():
       number = int(file.read())
       return number
   
-  except FileNotFoundError:
+  except:
     with open('number.txt', 'w') as file:
       number = 1
-      file.write(number)
+      file.write(str(number))
       return number
 
 def save_number(number):
   try:
     with open('songs.json', 'w') as file:
       number += 1
-      file.write(number)
+      file.write(str(number))
   except Exception as e:
      print(f"ERROR: {e}")
 
@@ -80,8 +80,8 @@ if __name__ == '__main__':
 
     # maked TTS
     if '' == args.input:
-      tts_output = os.path.join(os.getcwd(), 'tts', 'tts_generated.mp3')
-      subprocess.run(['cp', args.input, os.path.join(os.getcwd(), 'input', f'txt2txt.mp3')], check=True)
+      tts_input = os.path.join(os.getcwd(), 'tts_generated.mp3')
+      subprocess.run(['cp', tts_input, os.path.join(os.getcwd(), 'input', f'txt2txt.mp3')], check=True)
 
     else: # drive
       song_file = os.path.basename(args.input)
