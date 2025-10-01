@@ -11,8 +11,6 @@ import os
 import math
 
 from pydub import AudioSegment
-from pytubefix import YouTube
-from pytubefix.cli import on_progress
 
 from rvc import Config, load_hubert, get_vc, rvc_infer
 
