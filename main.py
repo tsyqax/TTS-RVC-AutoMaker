@@ -34,8 +34,8 @@ def load_number():
 
 def save_number(number):
   try:
-    with open('songs.json', 'w') as file:
-      number += 1
+    with open('number.txt', 'w') as file:
+      int(number) += 1
       file.write(str(number))
   except Exception as e:
      print(f"ERROR: {e}")
