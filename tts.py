@@ -32,11 +32,11 @@ if __name__ == '__main__':
   
     tts = edge_tts.Communicate(text, voice)
   
-    sound_file = os.path.join(os.getcwd(), 'tts', 'tts_generated.mp3')
+    sound_file = 'tts_generated.mp3'
     tts.save_sync(sound_file)
       
   except:
     from gtts import gTTS
     tts2 = gTTS(text, lang=lang) 
-    tts2.save(os.path.join(os.getcwd(), 'tts', 'tts_generated.mp3'))
+    tts2.save('tts_generated.mp3')
   print('TTS TTS!!')
