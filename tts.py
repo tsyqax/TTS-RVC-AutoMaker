@@ -15,17 +15,17 @@ if __name__ == '__main__':
   try:
     import edge_tts
     if lang == 'ja':
-      if castle == 'female':
+      if castle == 'Female':
         voice = 'ja-JP-NanamiNeural'
       else:
         voice = 'ja-JP-KeitaNeural'
     elif lang == 'ko':
-      if castle == 'female':
+      if castle == 'Female':
         voice = "ko-KR-SunHiNeural"
       else:
         voice = 'ko-KR-InJoonNeural'
     else:      
-      if castle == 'female':
+      if castle == 'Female':
         voice = 'en-US-AnaNeural'
       else:
         voice = 'en-US-EricNeural'
