@@ -6,7 +6,7 @@ if __name__ == '__main__':
   parser = argparse.ArgumentParser(description='AI RVC COVER', add_help=True)
   parser.add_argument('-txt', '--text', type=str, required=True, help='TEXT TO SAY')
   parser.add_argument('-cat', '--castle', type=str, default='Male', help='What is your castle')
-  parser.add_argument('-lang', '--language', type=float, default=0, help='TTS LANGUAGE')
+  parser.add_argument('-lang', '--language', type=str, default='en', help='TTS LANGUAGE')
   # BooleanOptionalAction
   args = parser.parse_args()
   text = args.text
