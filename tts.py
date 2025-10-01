@@ -34,9 +34,10 @@ if __name__ == '__main__':
   
     sound_file = 'tts_generated.mp3'
     tts.save_sync(sound_file)
+    print('TTS TTS!! (EdgeTTS!)')
       
   except:
     from gtts import gTTS
     tts2 = gTTS(text, lang=lang) 
     tts2.save('tts_generated.mp3')
-  print('TTS TTS!!')
+    print('TTS TTS!! (gtts!)')
