@@ -81,7 +81,7 @@ if __name__ == '__main__':
     os.makedirs(input_dirdir, exist_ok=True)
 
     # maked TTS
-    if '' === args.input:
+    if '' == args.input:
       tts_output = os.path.join(os.getcwd(), 'tts', 'tts_generated.mp3')
       subprocess.run(['cp', args.input, os.path.join(os.getcwd(), 'input', f'txt2txt.mp3')], check=True)
 
