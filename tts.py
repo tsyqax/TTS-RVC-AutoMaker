@@ -23,12 +23,12 @@ if __name__ == '__main__':
       if castle == 'Female':
         voice = "ko-KR-SunHiNeural"
       else:
-        voice = 'ko-KR-InJoonNeural'
+        voice = 'ko-KR-HyunsuMultilingual'
     else:      
       if castle == 'Female':
-        voice = 'en-US-AnaNeural'
+        voice = 'en-US-EmmaMultilingual'
       else:
-        voice = 'en-US-EricNeural'
+        voice = 'en-US-AndrewMultilingual'
   
     tts = edge_tts.Communicate(text, voice)
   
