@@ -13,6 +13,8 @@ if __name__ == '__main__':
   castle = args.castle
   lang = args.language
   try:
+    if castle == 'gtts':
+      raise Exception('gtts!')
     import edge_tts
     if lang == 'ja':
       if castle == 'Female':
@@ -23,13 +25,13 @@ if __name__ == '__main__':
       if castle == 'Female':
         voice = "ko-KR-SunHiNeural"
       else:
-        voice = 'ko-KR-HyunsuMultilingual'
+        voice = 'ko-KR-HyunsuMultilingualNeural'
     else:      
       if castle == 'Female':
-        voice = 'en-US-EmmaMultilingual'
+        voice = 'en-US-EmmaMultilingualNeural'
       else:
-        voice = 'en-US-AndrewMultilingual'
-  
+        voice = 'en-US-AndrewMultilingualNeural'
+
     tts = edge_tts.Communicate(text, voice)
   
     sound_file = 'tts_generated.mp3'
